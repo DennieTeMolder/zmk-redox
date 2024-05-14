@@ -75,6 +75,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        home_end: home_end {
+            compatible = "zmk,behavior-tap-dance";
+            label = "tap-dance home end";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp END>;
+        };
     };
 
     macros {
@@ -100,11 +107,11 @@
 
         base_layer {
             bindings = <
-&kp ESC    &kp N1        &kp N2        &kp N3       &kp N4        &kp N5                                                    &kp N6  &kp N7       &kp N8       &kp N9        &kp N0        &kp MINUS
-&kp TAB    &kp Q         &kp W         &kp E        &kp R         &kp T   &kp DELETE                          &kp EQUAL     &kp Y   &kp U        &kp I        &kp O         &kp SEMI      &kp BSPC
-&kp LCTRL  &hml LSHFT A  &hml LCTRL S  &hml LGUI D  &hml LALT F   &kp G   &kp LBKT                            &kp RBKT      &kp H   &hmr LALT J  &hmr RGUI K  &hmr RCTRL L  &hmr RSHFT P  &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C        &kp V         &kp B   &lt 7 PG_UP  &kp PG_DN    &kp HOME  &lt 7 END     &kp N   &kp M        &kp COMMA    &kp DOT       &kp FSLH      &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &to 4        &lth 2 ENTER          &kp SPACE    &none        &none     &smart_shift          &lth 3 ESC   &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT
+&kp ESC    &kp N1        &kp N2        &kp N3       &kp N4        &kp N5                                                              &kp N6  &kp N7       &kp N8       &kp N9        &kp N0        &kp MINUS
+&kp TAB    &kp Q         &kp W         &kp E        &kp R         &kp T   &kp DELETE                                    &kp EQUAL     &kp Y   &kp U        &kp I        &kp O         &kp SEMI      &kp BSPC
+&kp LCTRL  &hml LSHFT A  &hml LCTRL S  &hml LGUI D  &hml LALT F   &kp G   &kp BACKSPACE                                 &kp DELETE    &kp H   &hmr LALT J  &hmr RGUI K  &hmr RCTRL L  &hmr RSHFT P  &kp SQT
+&kp LSHFT  &kp Z         &kp X         &kp C        &kp V         &kp B   &lt 7 PG_UP    &kp PG_DN    &kp LEFT_BRACKET  &lt 7 RBKT    &kp N   &kp M        &kp COMMA    &kp DOT       &kp FSLH      &mt LSHFT RET
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &to 4        &lth 2 ENTER          &kp SPACE      &home_end    &kp BACKSPACE     &smart_shift          &lth 3 ESC   &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT
             >;
 
             label = "Base";
@@ -112,11 +119,11 @@
 
         symbol_layer_shared {
             bindings = <
-&trans     &kp F1         &kp F2    &kp F3     &kp F4      &kp F5                                                                       &kp F6     &kp F7         &kp F8     &kp F9     &kp F10    &kp UNDER
-&kp GRAVE  &kp EXCL       &kp AT    &kp POUND  &kp DOLLAR  &kp PERCENT  &kp F11                                        &kp F12          &kp CARET  &kp AMPERSAND  &kp STAR   &kp LPAR   &kp RPAR   &trans
-&trans     &kp PIPE       &kp PLUS  &kp MINUS  &kp EQUAL   &kp TILDE    &kp HOME                                       &kp END          &kp LEFT   &kp DOWN       &kp UP     &kp RIGHT  &kp TAB    &kp DOUBLE_QUOTES
-&trans     &kp BACKSLASH  &kp LT    &kp GT     &kp LPAR    &kp LBRC     &kp C_PREV  &htnr C_NEXT C_PP    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp RBRC   &kp RPAR       &kp LBKT   &kp RBKT   &kp QMARK  &trans
-&trans     &trans         &trans    &trans     &kp UNDER                &trans      &trans               &trans        &trans                      &trans         &kp PG_DN  &kp PG_UP  &kp INS    &kp PRINTSCREEN
+&trans     &kp F1         &kp F2    &kp F3     &kp F4      &kp F5                                                                &kp F6     &kp F7         &kp F8     &kp F9     &kp F10    &kp UNDER
+&kp GRAVE  &kp EXCL       &kp AT    &kp POUND  &kp DOLLAR  &kp PERCENT  &kp F11                                 &kp F12          &kp CARET  &kp AMPERSAND  &kp STAR   &kp LPAR   &kp RPAR   &trans
+&trans     &kp PIPE       &kp PLUS  &kp MINUS  &kp EQUAL   &kp TILDE    &trans                                  &trans           &kp LEFT   &kp DOWN       &kp UP     &kp RIGHT  &kp TAB    &kp DOUBLE_QUOTES
+&trans     &kp BACKSLASH  &kp LT    &kp GT     &kp LPAR    &kp LBRC     &kp C_PREV  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp RBRC   &kp RPAR       &kp LBKT   &kp RBKT   &kp QMARK  &trans
+&trans     &trans         &trans    &trans     &trans                   &kp UNDER   &kp C_PP      &kp K_MUTE    &trans                      &trans         &kp PG_DN  &kp PG_UP  &kp INS    &kp PRINTSCREEN
             >;
 
             label = "Sym";
@@ -127,7 +134,7 @@
 &trans  &trans     &trans     &trans    &trans    &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans    &trans    &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp HOME   &kp END   &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans    &trans            &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
 
