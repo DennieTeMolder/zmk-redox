@@ -114,10 +114,22 @@
 &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T   &kp DELETE                                         &kp DEL       &kp Y   &kp U        &kp I         &kp O        &kp SEMI      &kp BSPC
 &kp LCTRL  &hml LSHFT A  &hml LALT S   &hml LCTRL D  &hml LGUI F   &kp G   &kp BACKSPACE                                      &kp EQUAL     &kp H   &hmr RGUI J  &hmr RCTRL K  &hmr LALT L  &hmr RSHFT P  &kp SQT
 &kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B   &lt 7 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 7 RBKT    &kp N   &kp M        &kp COMMA     &kp DOT      &kp FSLH      &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &to 4         &lth 2 ENTER          &kp SPACE      &htnr END HOME    &kp BACKSPACE     &smart_shift          &lth 3 ESC   &kp LEFT      &kp DOWN     &kp UP        &kp RIGHT
+&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &to 1         &lth 3 ENTER          &kp SPACE      &htnr END HOME    &kp BACKSPACE     &smart_shift          &lth 4 ESC   &kp LEFT      &kp DOWN     &kp UP        &kp RIGHT
             >;
 
             label = "Base";
+        };
+
+        numpad_layer {
+            bindings = <
+&to 0   &kp EQUAL  &kp LPAR  &kp CARET  &kp RIGHT_PARENTHESIS  &kp PERCENT                                        &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
+&trans  &kp PLUS   &kp N7    &kp N8     &kp N9                 &kp STAR         &trans                    &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+&trans  &kp N0     &kp N4    &kp N5     &kp N6                 &htnr COMMA DOT  &trans                    &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans
+&trans  &kp MINUS  &kp N1    &kp N2     &kp N3                 &kp FSLH         &trans  &trans    &trans  &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans
+&to 0   &trans     &trans    &trans     &trans                                  &trans  &trans    &trans  &trans           &trans   &trans   &trans   &trans   &trans
+            >;
+
+            label = "Num";
         };
 
         symbol_layer_shared {
@@ -154,18 +166,6 @@
             >;
 
             label = "SymR";
-        };
-
-        numpad_layer {
-            bindings = <
-&to 0   &kp EQUAL  &kp LPAR  &kp CARET  &kp RIGHT_PARENTHESIS  &kp PERCENT                                        &kp F16  &kp F17  &kp F18  &kp F19  &kp F20  &trans
-&trans  &kp PLUS   &kp N7    &kp N8     &kp N9                 &kp STAR         &trans                    &trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
-&trans  &kp N0     &kp N4    &kp N5     &kp N6                 &htnr COMMA DOT  &trans                    &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans
-&trans  &kp MINUS  &kp N1    &kp N2     &kp N3                 &kp FSLH         &trans  &trans    &trans  &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans
-&to 0   &trans     &trans    &trans     &kp EQUAL                               &trans  &trans    &trans  &trans           &trans   &trans   &trans   &trans   &trans
-            >;
-
-            label = "Num";
         };
 
         left_gaming_layer {
@@ -209,13 +209,13 @@
         compatible = "zmk,conditional-layers";
 
         left_symbol_shared {
-            if-layers = <2>;
-            then-layer = <1>;
+            if-layers = <3>;
+            then-layer = <2>;
         };
 
         right_symbol_shared {
-            if-layers = <3>;
-            then-layer = <1>;
+            if-layers = <4>;
+            then-layer = <2>;
         };
     };
 };
