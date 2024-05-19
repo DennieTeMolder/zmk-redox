@@ -148,7 +148,7 @@
             bindings = <
 &trans  &trans     &trans    &trans     &trans    &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans     &trans    &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp LALT  &kp LCTRL  &kp LGUI  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &hml LSHFT PIPE  &hml LALT PLUS  &hml LCTRL MINUS  &hml LGUI EQUAL  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans     &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans    &trans     &trans            &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
@@ -160,7 +160,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans     &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans     &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp RGUI  &kp RCTRL  &kp LALT  &kp RSHFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &hmr RGUI DOWN  &hmr RCTRL UP  &hmr LALT RIGHT  &hmr RSHFT TAB  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans     &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans    &trans     &trans    &trans     &trans
             >;
