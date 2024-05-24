@@ -19,21 +19,21 @@
             bindings = <&kpnr>, <&kp>;
         };
 
-        hml: hml {
+        hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
             label = "home row mod left";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <220>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
             require-prior-idle-ms = <180>;
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <60 46 47 61 62 48 49 63 65 33 19 6 20 50 20 21 23 34 35 36 37 7 8 9 10 11 21 22 23 24 25 35 36 37 38 39 51 52 53 54 55 65 66 67 68 69 6 7 8 9 10 11 19 20 21 22 23 24 25 33 34 35 36 37 38 39 49 50 51 52 53 54 55 63 65 66 67 68 69 64>;
         };
 
-        hmr: hmr {
+        hrmr: hrmr {
             compatible = "zmk,behavior-hold-tap";
             label = "home row mod right";
             bindings = <&kp>, <&kp>;
@@ -85,6 +85,20 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            require-prior-idle-ms = <180>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 18 26 27 28 29 30 31 32 40 41 42 43 44 45 46 47 56 57 58 59 60 61 62 49 48 63 64 65>;
+        };
     };
 
     macros {
@@ -110,11 +124,11 @@
 
         base_layer {
             bindings = <
-&kp ESC    &kp N1        &kp N2        &kp N3        &kp N4        &kp N5                                                                   &kp N6  &kp N7       &kp N8        &kp N9       &kp N0        &kp MINUS
-&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T   &kp DELETE                                         &kp DEL       &kp Y   &kp U        &kp I         &kp O        &kp SEMI      &kp BSPC
-&kp LCTRL  &hml LSHFT A  &hml LALT S   &hml LCTRL D  &hml LGUI F   &kp G   &kp BACKSPACE                                      &kp EQUAL     &kp H   &hmr RGUI J  &hmr RCTRL K  &hmr LALT L  &hmr RSHFT P  &kp SQT
-&kp LSHFT  &kp Z         &kp X         &kp C         &kp V         &kp B   &lt 7 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 7 RBKT    &kp N   &kp M        &kp COMMA     &kp DOT      &kp FSLH      &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &kp RALT      &lth 3 ENTER          &lt 1 SPACE    &htnr END HOME    &kp BACKSPACE     &smart_shift          &lth 4 ESC   &kp LEFT      &kp DOWN     &kp UP        &kp RIGHT
+&kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                   &kp N6  &kp N7        &kp N8         &kp N9        &kp N0         &kp MINUS
+&kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &kp DEL       &kp Y   &kp U         &kp I          &kp O         &kp SEMI       &kp BSPC
+&kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &kp EQUAL     &kp H   &hrmr RGUI J  &hrmr RCTRL K  &hrmr LALT L  &hrmr RSHFT P  &kp SQT
+&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &lt 7 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 7 RBKT    &kp N   &kp M         &kp COMMA      &kp DOT       &kp FSLH       &mt LSHFT RET
+&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &lth 3 ENTER          &lt 1 SPACE    &htnr END HOME    &key_repeat       &smart_shift          &lth 4 ESC    &kp LEFT       &kp DOWN      &kp UP         &kp RIGHT
             >;
 
             label = "Base";
@@ -146,11 +160,11 @@
 
         symbol_layer_left {
             bindings = <
-&trans  &trans           &trans          &trans            &trans           &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans          &trans            &trans           &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &hml LSHFT PIPE  &hml LALT PLUS  &hml LCTRL MINUS  &hml LGUI EQUAL  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans          &trans            &trans           &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans          &trans            &trans                   &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans           &trans             &trans            &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans           &trans             &trans            &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &hrml LSHFT PIPE  &hrml LALT PLUS  &hrml LCTRL MINUS  &hrml LGUI EQUAL  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans           &trans             &trans            &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans           &trans             &trans                    &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "SymL";
@@ -158,11 +172,11 @@
 
         symbol_layer_right {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans          &trans         &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans          &trans         &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &hmr RGUI DOWN  &hmr RCTRL UP  &hmr LALT RIGHT  &hmr RSHFT TAB  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans         &trans           &trans          &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans          &trans         &trans           &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans           &trans          &trans            &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans           &trans          &trans            &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &hrmr RGUI DOWN  &hrmr RCTRL UP  &hrmr LALT RIGHT  &hrmr RSHFT TAB  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans           &trans          &trans            &trans           &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans           &trans          &trans            &trans           &trans
             >;
 
             label = "SymR";
@@ -182,11 +196,11 @@
 
         right_gaming_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans    &trans     &trans  &trans
-&to 0   &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                          &trans  &trans    &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans    &kp UP    &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans       &trans  &trans  &trans  &trans    &trans    &trans     &trans  &trans
+&to 0   &trans  &trans  &trans  &trans          &kp SPACE  &kp LCTRL    &trans  &trans          &trans    &trans    &trans     &trans  &trans
             >;
 
             label = "GameR";
