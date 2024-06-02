@@ -120,11 +120,11 @@
 
         base_layer {
             bindings = <
-&kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                       &kp N6  &kp N7        &kp N8             &kp N9           &kp N0            &kp MINUS
-&kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &kp DEL           &kp Y   &kp U         &kp I              &kp O            &kp SEMI          &kp BSPC
-&kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &htnr PLUS EQUAL  &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P     &kp SQT
-&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &lt 6 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 6 RBKT        &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH  &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &mo 1                 &lt 3 SPACE    &htnr END HOME    &key_repeat       &smart_shift              &mo 2         &kp LEFT           &kp DOWN         &kp UP            &kp RIGHT
+&kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                        &kp N6  &kp N7        &kp N8             &kp N9           &kp N0                 &kp MINUS
+&kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &htnr C_NEXT C_PP  &kp Y   &kp U         &kp I              &kp O            &htnr EQUAL SEMICOLON  &kp BSPC
+&kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &htnr PLUS EQUAL   &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P          &kp SQT
+&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &lt 6 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 6 RBKT         &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
+&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &mo 1                 &lt 3 SPACE    &htnr END HOME    &key_repeat       &smart_shift               &mo 2         &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
             >;
 
             label = "Base";
@@ -156,11 +156,11 @@
 
         nav_layer {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans     &trans     &trans
-&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &trans     &trans
-&trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &kp TAB    &trans                    &trans  &kp LEFT   &kp DOWN     &kp UP           &kp RIGHT  &kp ENTER  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp SPACE  &trans  &trans    &trans  &trans  &kp HOME   &kp PG_DN    &kp PG_UP        &kp END    &trans     &trans
-&trans  &trans     &trans     &trans     &trans                &trans  &trans    &trans  &trans             &trans       &trans           &trans     &trans     &trans
+&trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans     &trans         &trans
+&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &trans         &trans
+&trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &kp SPACE  &trans                    &trans  &kp LEFT   &kp DOWN     &kp UP           &kp RIGHT  &htnr RET TAB  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans  &trans    &trans  &trans  &kp HOME   &kp PG_DN    &kp PG_UP        &kp END    &trans         &trans
+&trans  &trans     &trans     &trans     &trans                &trans  &trans    &trans  &trans             &trans       &trans           &trans     &trans         &trans
             >;
 
             label = "Nav";
