@@ -99,19 +99,19 @@
         combo_return {
             bindings = <&kp RET>;
             key-positions = <42 43>;
-            layers = <0 1 2 3>;
+            layers = <0 1 4 5>;
         };
 
         combo_c_return {
             bindings = <&kp LC(RET)>;
             key-positions = <42 43 44>;
-            layers = <0 1 2 3>;
+            layers = <0 1 4 5>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <53 52>;
-            layers = <0 1 2 3>;
+            layers = <0 1 4 5>;
         };
     };
 
@@ -123,26 +123,50 @@
 &kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                        &kp N6  &kp N7        &kp N8             &kp N9           &kp N0                 &kp MINUS
 &kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &htnr C_NEXT C_PP  &kp Y   &kp U         &kp I              &kp O            &htnr EQUAL SEMICOLON  &kp BSPC
 &kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &kp EQUAL          &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P          &kp SQT
-&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &lt 6 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 6 RBKT         &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &mo 1                 &lt 3 SPACE    &htnr END HOME    &key_repeat       &smart_shift               &mo 2         &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
+&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &lt 8 PG_UP    &kp PG_DN         &kp LEFT_BRACKET  &lt 8 RBKT         &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
+&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &mo 2                 &lt 5 SPACE    &htnr END HOME    &key_repeat       &smart_shift               &mo 4         &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
             >;
 
             label = "Base";
         };
 
-        numpad_layer {
+        left_symbol_base_layer {
             bindings = <
 &trans  &kp F1         &kp F2  &kp F3            &kp F4          &kp F5                                                                 &kp F6     &kp F7     &kp F8      &kp F9     &kp F10        &kp UNDER
 &trans  &kp PLUS       &kp N7  &htnr ASTRK N8    &htnr LPAR N9   &kp EQUAL        &kp F11                                 &kp F12       &kp CARET  &kp AMPS   &kp LBRC    &kp RBRC   &kp BACKSLASH  &trans
 &trans  &htnr RPAR N0  &kp N4  &htnr PERCENT N5  &htnr CARET N6  &htnr COMMA DOT  &trans                                  &kp PLUS      &kp ASTRK  &kp UNDER  &kp LPAR    &kp RPAR   &kp COLON      &kp DQT
 &trans  &kp MINUS      &kp N1  &kp N2            &kp N3          &kp FSLH         &kp C_PREV  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp LT     &kp GT     &kp LBKT    &kp RBKT   &kp QMARK      &trans
-&trans  &trans         &trans  &trans            &mo 1                            &trans      &kp C_PP      &kp K_MUTE    &trans                   &mo 1      &kp INSERT  &kp PSCRN  &trans         &trans
+&trans  &trans         &trans  &trans            &trans                           &trans      &kp C_PP      &kp K_MUTE    &trans                   &mo 3      &kp INSERT  &kp PSCRN  &trans         &trans
             >;
 
-            label = "Num";
+            label = "SymL0";
         };
 
-        symbol_layer_shared {
+        left_symbol_entry_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "SymL1";
+        };
+
+        left_symbol_hold_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "SymL2";
+        };
+
+        right_symbol_layer {
             bindings = <
 &trans  &kp F1         &kp F2    &kp F3     &kp F4       &kp F5                                                              &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &trans
 &trans  &kp EXCL       &kp AT    &kp POUND  &kp DOLLAR   &kp GRAVE  &kp F11                                 &kp F12          &trans  &trans  &trans  &trans  &trans   &trans
@@ -151,10 +175,10 @@
 &trans  &trans         &trans    &trans     &trans                  &trans      &kp C_PP      &kp K_MUTE    &trans                   &trans  &trans  &trans  &trans   &trans
             >;
 
-            label = "Sym";
+            label = "SymR";
         };
 
-        nav_layer {
+        navigation_layer {
             bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans     &trans         &trans
 &trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &trans         &trans
@@ -194,7 +218,7 @@
             bindings = <
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                      &none   &none  &none       &none  &none      &none
 &none         &none         &none           &none         &none         &none         &bt BT_CLR                              &none       &none   &none  &kp INSERT  &none  &none      &none
-&none         &none         &kp SCROLLLOCK  &none         &none         &tog 4        &sys_reset                              &sys_reset  &tog 5  &none  &none       &none  &kp PSCRN  &none
+&none         &none         &kp SCROLLLOCK  &none         &none         &tog 6        &sys_reset                              &sys_reset  &tog 7  &none  &none       &none  &kp PSCRN  &none
 &none         &to 0         &none           &kp CAPS      &none         &none         &none       &bootloader    &bootloader  &none       &none   &none  &none       &none  &none      &none
 &none         &none         &none           &none         &none                       &none       &none          &none        &kp RALT            &none  &none       &none  &none      &none
             >;
@@ -203,5 +227,17 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        SymL_entry {
+            if-layers = <2>;
+            then-layer = <1>;
+        };
+
+        SymL_hold {
+            if-layers = <3>;
+            then-layer = <1>;
+        };
+    };
 };
