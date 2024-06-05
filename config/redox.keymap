@@ -181,7 +181,7 @@
         navigation_layer {
             bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans     &trans         &trans
-&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &trans         &trans
+&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &kp DEL        &trans
 &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &kp SPACE  &trans                    &trans  &kp LEFT   &kp DOWN     &kp UP           &kp RIGHT  &htnr RET TAB  &trans
 &trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans  &trans    &trans  &trans  &kp HOME   &kp PG_DN    &kp PG_UP        &kp END    &trans         &trans
 &trans  &trans     &trans     &trans     &trans                &trans  &trans    &trans  &trans             &trans       &trans           &trans     &trans         &trans
@@ -237,6 +237,11 @@
 
         SymL_hold {
             if-layers = <3>;
+            then-layer = <1>;
+        };
+
+        SymL_SymR {
+            if-layers = <4>;
             then-layer = <1>;
         };
     };
