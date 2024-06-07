@@ -180,11 +180,11 @@
 
         navigation_layer {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans     &trans         &trans
-&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)  &kp DEL        &trans
-&trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &kp SPACE  &trans                    &trans  &kp LEFT   &kp DOWN     &kp UP           &kp RIGHT  &htnr RET TAB  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans  &trans    &trans  &trans  &kp HOME   &kp PG_DN    &kp PG_UP        &kp END    &trans         &trans
-&trans  &trans     &trans     &trans     &trans                &trans  &trans    &trans  &trans             &trans       &trans           &trans     &trans         &trans
+&trans  &trans     &trans     &trans     &trans     &trans                                       &trans     &trans       &trans           &trans       &trans         &trans
+&trans  &trans     &trans     &trans     &trans     &trans     &trans                    &trans  &kp LC(Y)  &kp LC(TAB)  &kp LC(LS(TAB))  &kp LC(Z)    &kp DEL        &trans
+&trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LGUI   &kp SPACE  &trans                    &trans  &kp LEFT   &kp DOWN     &kp UP           &kp RIGHT    &htnr RET TAB  &trans
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans  &trans    &trans  &trans  &kp HOME   &kp LBRC     &kp RBRC         &kp END      &kp PERCENT    &trans
+&trans  &trans     &trans     &trans     &trans                &trans  &trans    &trans  &trans             &trans       &kp PAGE_DOWN    &kp PAGE_UP  &trans         &trans
             >;
 
             label = "Nav";
