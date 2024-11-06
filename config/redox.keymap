@@ -212,9 +212,9 @@
             bindings = <
 &trans       &trans     &trans     &trans       &trans     &trans                                       &trans     &trans           &trans         &trans       &trans     &trans
 &kp LS(TAB)  &kp TILDE  &kp SPACE  &kp PERCENT  &kp LC(R)  &kp LC(T)  &trans                    &trans  &kp LC(Y)  &kp LC(Z)        &kp LBRC       &kp RBRC     &kp DEL    &trans
-&trans       &kp LSHFT  &kp LALT   &kp LCTRL    &kp LGUI   &kp LC(G)  &trans                    &trans  &kp LEFT   &kp DOWN         &kp UP         &kp RIGHT    &kp TAB    &trans
-&trans       &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)  &trans  &trans    &trans  &trans  &kp HOME   &kp LC(LS(TAB))  &kp LC(TAB)    &kp END      &kp ENTER  &kp RET
-&to 0        &trans     &trans     &trans       &trans                &trans  &trans    &trans  &trans             &kp SPACE        &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans
+&trans       &kp LSHFT  &kp LALT   &kp LCTRL    &kp LGUI   &kp LC(G)  &trans                    &trans  &kp LEFT   &kp DOWN         &kp UP         &kp RIGHT    &kp TAB    &kp RET
+&trans       &kp LC(Z)  &kp LC(X)  &kp LC(C)    &kp LC(V)  &kp LC(B)  &trans  &trans    &trans  &trans  &kp HOME   &kp LC(LS(TAB))  &kp LC(TAB)    &kp END      &kp SPACE  &trans
+&to 0        &trans     &trans     &trans       &trans                &trans  &trans    &trans  &trans             &kp RET          &kp PAGE_DOWN  &kp PAGE_UP  &trans     &trans
             >;
 
             label = "Nav";
