@@ -153,7 +153,7 @@
 &kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                           &kp N6  &kp N7        &kp N8             &kp N9           &kp N0                 &kp MINUS
 &kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &kp MINUS             &kp Y   &kp U         &kp I              &kp O            &htnr EQUAL SEMICOLON  &kp BSPC
 &kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &kp EQUAL             &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P          &kp SQT
-&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &ltqt 8 PG_UP  &kp PG_DN         &kp LEFT_BRACKET  &ltqt 8 RBKT          &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
+&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &ltqt 0 PG_UP  &kp PG_DN         &kp LEFT_BRACKET  &ltqt 0 RBKT          &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
 &kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &htsl 2 2             &ltqt 5 SPACE  &htnr END HOME    &key_repeat       &smart_shift LSHFT 0          &htsl 4 4     &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
             >;
 
@@ -220,7 +220,7 @@
             label = "Nav";
         };
 
-        base_gaming_layer {
+        gaming_base_layer {
             bindings = <
 &trans  &trans  &trans  &trans    &trans     &trans                                             &trans  &trans  &trans     &trans    &trans    &trans
 &trans  &trans  &trans  &trans    &trans     &trans  &trans                          &trans     &trans  &trans  &trans     &trans    &kp SEMI  &trans
@@ -229,10 +229,22 @@
 &to 0   &trans  &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &trans  &kp LSHFT          &trans  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
-            label = "Game";
+            label = "Game0";
         };
 
-        wasd_gaming_layer {
+        gaming_entry_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "Game1";
+        };
+
+        gaming_wasd_layer {
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp N6                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -241,14 +253,14 @@
 &to 0   &trans     &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "GameWASD";
+            label = "WASD";
         };
 
         config_layer {
             bindings = <
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                      &none   &none  &none       &none  &none      &none
 &none         &none         &none           &none         &none         &none         &bt BT_CLR                              &none       &none   &none  &kp INSERT  &none  &none      &none
-&none         &none         &kp SCROLLLOCK  &none         &none         &tog 7        &sys_reset                              &sys_reset  &tog 6  &none  &none       &none  &kp PSCRN  &none
+&none         &none         &kp SCROLLLOCK  &none         &none         &tog 9        &sys_reset                              &sys_reset  &tog 6  &none  &none       &none  &kp PSCRN  &none
 &none         &none         &none           &kp CAPS      &none         &none         &none       &bootloader    &bootloader  &none       &none   &none  &none       &none  &none      &none
 &to 0         &none         &none           &none         &none                       &none       &none          &none        &kp RALT            &none  &none       &none  &none      &none
             >;
@@ -275,8 +287,13 @@
             then-layer = <1>;
         };
 
-        Game {
+        Game_Entry {
             if-layers = <7>;
+            then-layer = <6>;
+        };
+
+        Game_WASD {
+            if-layers = <8>;
             then-layer = <6>;
         };
     };
