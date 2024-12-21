@@ -260,7 +260,7 @@
             bindings = <
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                      &none   &none  &none       &none  &none      &none
 &none         &none         &none           &none         &none         &none         &bt BT_CLR                              &none       &none   &none  &kp INSERT  &none  &none      &none
-&none         &none         &kp SCROLLLOCK  &none         &none         &tog 9        &sys_reset                              &sys_reset  &tog 6  &none  &none       &none  &kp PSCRN  &none
+&none         &none         &kp SCROLLLOCK  &none         &none         &tog 8        &sys_reset                              &sys_reset  &tog 7  &none  &none       &none  &kp PSCRN  &none
 &none         &none         &none           &kp CAPS      &none         &none         &none       &bootloader    &bootloader  &none       &none   &none  &none       &none  &none      &none
 &to 0         &none         &none           &none         &none                       &none       &none          &none        &kp RALT            &none  &none       &none  &none      &none
             >;
