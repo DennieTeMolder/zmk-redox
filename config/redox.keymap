@@ -220,35 +220,35 @@
             label = "Nav";
         };
 
-        left_gaming_layer {
+        base_gaming_layer {
             bindings = <
-&trans  &trans     &trans  &trans    &trans     &trans                                             &trans  &trans  &trans     &trans   &trans    &trans
-&trans  &kp TAB    &kp Q   &kp W     &kp E      &kp R   &kp N6                          &trans     &trans  &trans  &trans     &trans   &kp SEMI  &trans
-&trans  &kp LSHFT  &kp A   &kp S     &kp D      &kp F   &kp T                           &trans     &trans  &kp J   &kp K      &kp L    &kp P     &trans
-&trans  &kp LCTRL  &kp Z   &kp X     &kp C      &kp V   &kp G      &kp B        &trans  &trans     &trans  &trans  &kp COMMA  &kp DOT  &kp FSLH  &kp ENTER
-&to 0   &trans     &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &trans  &kp LSHFT          &trans  &trans     &trans   &trans    &trans
+&trans  &trans  &trans  &trans    &trans     &trans                                             &trans  &trans  &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &trans                          &trans     &trans  &trans  &trans     &trans    &kp SEMI  &trans
+&trans  &kp A   &kp S   &kp D     &kp F      &trans  &trans                          &trans     &trans  &kp J   &kp K      &kp L     &kp P     &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &trans     &trans       &trans  &trans     &trans  &trans  &kp COMMA  &kp DOT   &kp UP    &kp ENTER
+&to 0   &trans  &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &trans  &kp LSHFT          &trans  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
-            label = "GameL";
+            label = "Game";
         };
 
-        right_gaming_layer {
+        wasd_gaming_layer {
             bindings = <
-&trans  &trans  &trans  &trans    &trans     &trans                                             &trans  &trans    &trans     &trans     &trans    &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &trans                          &trans     &trans  &trans    &kp UP     &trans     &kp SEMI  &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &trans                          &trans     &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &kp P     &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &trans     &trans       &trans  &trans     &trans  &trans    &kp COMMA  &kp DOT    &kp FSLH  &kp ENTER
-&to 0   &trans  &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &trans  &kp LSHFT          &trans    &trans     &trans     &trans    &trans
+&trans  &trans     &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp N6                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp A   &kp S   &kp D   &kp F   &kp T                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LALT   &kp Z   &kp X   &kp C   &kp V   &kp G   &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans     &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
 
-            label = "GameR";
+            label = "GameWASD";
         };
 
         config_layer {
             bindings = <
 &out OUT_TOG  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                                      &none   &none  &none       &none  &none      &none
 &none         &none         &none           &none         &none         &none         &bt BT_CLR                              &none       &none   &none  &kp INSERT  &none  &none      &none
-&none         &none         &kp SCROLLLOCK  &none         &none         &tog 6        &sys_reset                              &sys_reset  &tog 7  &none  &none       &none  &kp PSCRN  &none
+&none         &none         &kp SCROLLLOCK  &none         &none         &tog 7        &sys_reset                              &sys_reset  &tog 6  &none  &none       &none  &kp PSCRN  &none
 &none         &none         &none           &kp CAPS      &none         &none         &none       &bootloader    &bootloader  &none       &none   &none  &none       &none  &none      &none
 &to 0         &none         &none           &none         &none                       &none       &none          &none        &kp RALT            &none  &none       &none  &none      &none
             >;
@@ -273,6 +273,11 @@
         SymL_SymR {
             if-layers = <4>;
             then-layer = <1>;
+        };
+
+        Game {
+            if-layers = <7>;
+            then-layer = <6>;
         };
     };
 };
