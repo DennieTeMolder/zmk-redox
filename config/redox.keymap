@@ -222,11 +222,11 @@
 
         gaming_base_layer {
             bindings = <
-&trans  &trans  &trans  &trans    &trans     &trans                                             &trans  &trans  &trans     &trans    &trans    &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &trans                          &trans     &trans  &trans  &trans     &trans    &kp SEMI  &trans
-&trans  &kp A   &kp S   &kp D     &kp F      &trans  &trans                          &trans     &trans  &kp J   &kp K      &kp L     &kp P     &trans
-&trans  &trans  &trans  &trans    &trans     &trans  &trans     &trans       &trans  &trans     &trans  &trans  &kp COMMA  &kp DOT   &kp UP    &kp ENTER
-&to 0   &trans  &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &trans  &kp LSHFT          &trans  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
+&trans  &trans  &trans  &trans    &trans     &trans                                                &trans  &trans  &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &kp N6                             &trans     &trans  &trans  &trans     &trans    &kp SEMI  &trans
+&trans  &kp A   &kp S   &kp D     &kp F      &trans  &trans                             &trans     &trans  &kp J   &kp K      &kp L     &kp P     &trans
+&trans  &trans  &trans  &trans    &trans     &trans  &trans     &trans       &trans     &trans     &trans  &trans  &kp COMMA  &kp DOT   &kp UP    &kp ENTER
+&to 0   &trans  &trans  &kp LALT  &kp LCTRL          &kp SPACE  &kp ENTER    &kp RCTRL  &kp RSHFT          &trans  &kp SLASH  &kp LEFT  &kp DOWN  &kp RIGHT
             >;
 
             label = "Game0";
@@ -247,7 +247,7 @@
         gaming_wasd_layer {
             bindings = <
 &trans  &trans     &trans  &trans  &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp N6                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp TAB    &kp Q   &kp W   &kp E   &kp R   &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LSHFT  &kp A   &kp S   &kp D   &kp F   &kp T                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LALT   &kp Z   &kp X   &kp C   &kp V   &kp G   &kp B     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &to 0   &trans     &trans  &trans  &trans          &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans
