@@ -135,20 +135,14 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_return {
-            bindings = <&kp RET>;
+        combo_home {
+            bindings = <&kp HOME>;
             key-positions = <42 43>;
             layers = <0 1 4 5>;
         };
 
-        combo_c_return {
-            bindings = <&kp LC(RET)>;
-            key-positions = <42 43 44>;
-            layers = <0 1 4 5>;
-        };
-
-        combo_esc {
-            bindings = <&kp ESC>;
+        combo_end {
+            bindings = <&kp END>;
             key-positions = <53 52>;
             layers = <0 1 4 5>;
         };
@@ -159,11 +153,11 @@
 
         base_layer {
             bindings = <
-&kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                           &kp N6  &kp N7        &kp N8             &kp N9           &kp N0                 &kp MINUS
-&kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                         &kp MINUS             &kp Y   &kp U         &kp I              &kp O            &htnr EQUAL SEMICOLON  &kp BSPC
-&kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                      &kp EQUAL             &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P          &kp SQT
-&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &ltqt 9 PG_UP  &kp PG_DN         &kp LEFT_BRACKET  &ltqt 9 RBKT          &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
-&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &htsl 2 2             &ltqt 5 SPACE  &htnr END HOME    &kp RET           &smart_shift LSHFT 0          &htsl 4 4     &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
+&kp ESC    &kp N1         &kp N2        &kp N3         &kp N4        &kp N5                                                                      &kp N6  &kp N7        &kp N8             &kp N9           &kp N0                 &kp MINUS
+&kp TAB    &kp Q          &kp W         &kp E          &kp R         &kp T   &kp DELETE                                    &kp MINUS             &kp Y   &kp U         &kp I              &kp O            &htnr EQUAL SEMICOLON  &kp BSPC
+&kp LCTRL  &hrml LSHFT A  &hrml LALT S  &hrml LCTRL D  &hrml LGUI F  &kp G   &kp BACKSPACE                                 &kp EQUAL             &kp H   &hrmr RGUI J  &hrmr RCTRL K      &hrmr LALT L     &hrmr RSHFT P          &kp SQT
+&kp LSHFT  &kp Z          &kp X         &kp C          &kp V         &kp B   &ltqt 9 PG_UP  &kp PG_DN    &kp LEFT_BRACKET  &ltqt 9 RBKT          &kp N   &kp M         &htnr UNDER COMMA  &htnr MINUS DOT  &htnr EXCL SLASH       &mt LSHFT RET
+&kp LCTRL  &kp LEFT_GUI   &kp LEFT_ALT  &kp RALT       &htsl 2 2             &ltqt 5 SPACE  &kp RET      &kp ESC           &smart_shift LSHFT 0          &htsl 4 4     &kp LEFT           &kp DOWN         &kp UP                 &kp RIGHT
             >;
 
             label = "Base";
