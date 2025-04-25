@@ -114,6 +114,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        lpar_brc: lpar_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Left parenthesis brace";
+            bindings = <&kp LPAR>, <&kp LBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_brc: rpar_brc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Right parenthesis brace";
+            bindings = <&kp RPAR>, <&kp RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -165,11 +183,11 @@
 
         left_symbol_base_layer {
             bindings = <
-&trans  &kp F1         &kp F2           &kp F3            &kp F4          &kp F5                                                                 &kp F6       &kp F7         &kp F8      &kp F9    &kp F10            &kp UNDER
-&trans  &kp PLUS       &htnr AMPS N7    &htnr ASTRK N8    &htnr LPAR N9   &kp EQUAL        &kp F11                                 &kp F12       &kp CARET    &kp AMPS       &kp LBRC    &kp RBRC  &kp COLON          &trans
-&trans  &htnr RPAR N0  &htnr DOLLAR N4  &htnr PERCENT N5  &htnr CARET N6  &htnr COMMA DOT  &trans                                  &kp PLUS      &kp PERCENT  &kp STAR       &kp LPAR    &kp RPAR  &kp DOUBLE_QUOTES  &trans
-&trans  &kp MINUS      &htnr EXCL N1    &htnr AT N2       &htnr HASH N3   &kp FSLH         &kp C_PREV  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp POUND    &kp BACKSLASH  &kp LBKT    &kp RBKT  &kp QMARK          &trans
-&to 0   &trans         &trans           &trans            &trans                           &trans      &kp C_PP      &kp K_MUTE    &trans                     &lt 3 SPACE    &kp INSERT  &kp RALT  &kp PSCRN          &trans
+&trans  &kp F1         &kp F2           &kp F3            &kp F4          &kp F5                                                                 &kp F6          &kp F7       &kp F8      &kp F9     &kp F10            &kp UNDER
+&trans  &kp PLUS       &htnr AMPS N7    &htnr ASTRK N8    &htnr LPAR N9   &kp EQUAL        &kp F11                                 &kp F12       &kp CARET       &kp AMPS     &kp STAR    &lpar_brc  &rpar_brc          &kp DEL
+&trans  &htnr RPAR N0  &htnr DOLLAR N4  &htnr PERCENT N5  &htnr CARET N6  &htnr COMMA DOT  &trans                                  &kp PLUS      &kp LEFT_ARROW  &kp DOWN     &kp UP      &kp RIGHT  &kp DOUBLE_QUOTES  &trans
+&trans  &kp MINUS      &htnr EXCL N1    &htnr AT N2       &htnr HASH N3   &kp FSLH         &kp C_PREV  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp PERCENT     &kp STAR     &kp LBKT    &kp RBKT   &kp BACKSLASH      &trans
+&to 0   &trans         &trans           &trans            &trans                           &trans      &kp C_PP      &kp K_MUTE    &trans                        &lt 3 SPACE  &kp INSERT  &kp RALT   &kp PSCRN          &trans
             >;
 
             label = "SymL0";
@@ -211,16 +229,16 @@
             label = "SymR";
         };
 
-        navigation_layer {
+        space_layer {
             bindings = <
-&trans       &kp LG(NUMBER_1)  &kp LG(N2)        &kp LG(N3)         &kp LG(N4)        &kp LG(N5)                                    &kp LG(N6)  &kp LG(N7)  &kp LG(N8)  &kp LG(N9)  &kp LG(N0)   &trans
-&kp LS(TAB)  &kp LC(Q)         &kp LC(W)         &kp LC(E)          &kp LC(R)         &kp LC(T)   &trans                    &trans  &kp LC(Y)   &kp LC(U)   &kp LBRC    &kp RBRC    &kp DEL      &trans
-&trans       &kp LC(A)         &hrml LALT LC(S)  &hrml LCTRL LC(D)  &hrml LGUI LC(F)  &kp LC(G)   &trans                    &trans  &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &kp TAB      &kp RET
-&trans       &kp LC(Z)         &kp LC(X)         &kp LC(C)          &kp LC(V)         &kp LC(B)   &trans  &trans    &trans  &trans  &kp HOME    &kp PG_DN   &kp PG_UP   &kp END     &perc_tilde  &trans
-&to 0        &trans            &trans            &trans             &trans                        &trans  &trans    &trans  &trans              &kp SPACE   &trans      &trans      &trans       &trans
+&kp LS(ESC)  &kp LG(NUMBER_1)  &kp LG(N2)        &kp LG(N3)         &kp LG(N4)        &kp LG(N5)                                                      &kp LG(N6)  &kp LG(N7)  &kp LG(N8)     &kp LG(N9)   &kp LG(N0)    &kp LC(MINUS)
+&kp LS(TAB)  &kp LC(Q)         &kp LC(W)         &kp LC(E)          &kp LC(R)         &kp LC(T)   &kp LC(DEL)                          &kp LC(MINUS)  &kp LC(Y)   &kp LC(U)   &kp LC(I)      &kp LC(O)    &kp LC(SEMI)  &kp LC(BSPC)
+&trans       &kp LC(A)         &hrml LALT LC(S)  &hrml LCTRL LC(D)  &hrml LGUI LC(F)  &kp LC(G)   &kp LC(RET)                          &kp LC(EQUAL)  &kp LC(H)   &kp LC(J)   &kp LC(K)      &kp LC(L)    &kp LC(P)     &kp LC(APOS)
+&trans       &kp LC(Z)         &kp LC(X)         &kp LC(C)          &kp LC(V)         &kp LC(B)   &trans       &trans    &kp LC(LBKT)  &kp LC(RBKT)   &kp LC(N)   &kp LC(M)   &kp LC(COMMA)  &kp LC(DOT)  &kp LC(FSLH)  &kp LC(ENTER)
+&to 0        &trans            &trans            &trans             &trans                        &trans       &trans    &kp LC(ESC)   &trans                     &kp SPACE   &trans         &trans       &trans        &trans
             >;
 
-            label = "Nav";
+            label = "SPC";
         };
 
         gaming_base_layer {
