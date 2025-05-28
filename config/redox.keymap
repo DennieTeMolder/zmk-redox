@@ -129,13 +129,13 @@
         combo_home {
             bindings = <&kp HOME>;
             key-positions = <42 43>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         combo_end {
             bindings = <&kp END>;
             key-positions = <53 52>;
-            layers = <0 1>;
+            layers = <0>;
         };
     };
 
