@@ -172,11 +172,11 @@
         numpad_layer {
             label = "Num";
             bindings = <
-&kp LS(ESC)  &kp LG(N1)     &kp LG(N2)       &kp LG(N3)        &kp LG(N4)      &kp LG(N5)                                                   &trans          &trans          &trans        &trans           &trans  &trans
-&kp LS(TAB)  &kp PLUS       &htnr AMPS N7    &htnr ASTRK N8    &htnr LPAR N9   &kp EQUAL        &kp LG(N6)                       &trans     &none           &mkp MB4        &mkp MB5      &none            &none   &trans
-&trans       &htnr RPAR N0  &htnr DOLLAR N4  &htnr PERCENT N5  &htnr CARET N6  &htnr COMMA DOT  &trans                           &trans     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &to 2   &trans
-&trans       &kp MINUS      &htnr EXCL N1    &htnr AT N2       &htnr HASH N3   &kp FSLH         &trans      &trans    &trans     &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &to 0   &trans
-&to 0        &trans         &trans           &trans            &trans                           &trans      &trans    &mkp MCLK  &mkp LCLK                  &mkp RCLK       &trans        &trans           &trans  &trans
+&kp LS(ESC)  &kp LG(N1)     &kp LG(N2)       &kp LG(N3)        &kp LG(N4)      &kp LG(N5)                                                   &trans          &trans          &trans          &trans           &trans  &trans
+&kp LS(TAB)  &kp PLUS       &htnr AMPS N7    &htnr ASTRK N8    &htnr LPAR N9   &kp EQUAL        &kp LG(N6)                       &trans     &none           &mkp MB4        &mmv MOVE_UP    &mkp MB5         &none   &trans
+&trans       &htnr RPAR N0  &htnr DOLLAR N4  &htnr PERCENT N5  &htnr CARET N6  &htnr COMMA DOT  &trans                           &trans     &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &to 2   &trans
+&trans       &kp MINUS      &htnr EXCL N1    &htnr AT N2       &htnr HASH N3   &kp FSLH         &trans      &trans    &trans     &trans     &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &to 0   &trans
+&to 0        &trans         &trans           &trans            &trans                           &trans      &trans    &mkp MCLK  &mkp LCLK                  &mkp RCLK       &trans          &trans           &trans  &trans
             >;
         };
 
